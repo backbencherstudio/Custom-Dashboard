@@ -1,0 +1,340 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url('./SpaceGrotesk_Complete/Fonts/WEB/fonts/SpaceGrotesk-Regular.woff2');
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #060715;
+  color: #e0e0e0;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgb(73, 36, 68), #000000ad 50%);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 290px;
+  min-height: 100vh;
+  background-color: #1a1d2e;
+  color: #ffffff;
+  padding-top: 20px;
+  position: fixed;
+}
+
+.sidebar h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-left: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #a4a6b3;
+  cursor: pointer;
+}
+
+.sidebar li i {
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.sidebar li:hover {
+  background-color: #2a2e43;
+  color: #ffffff;
+}
+
+.sidebar .section-title {
+  font-size: 12px;
+  color: #4b4f67;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  color: #8f9bb3;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+.subMenu{
+  margin-left: 20px;
+}
+
+ 
+
+ 
+
+ 
+
+
+/* Header and stats */
+.header {
+  padding: 15px;
+  color: #e0e0e0;
+  background-color: #1b1f3b;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.stat-btn {
+  background-color: #323456;
+  color: #fff;
+  border: none;
+  /* padding: 7px 20px; */
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 300;
+  min-width: 150px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.stats {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-btn.information {
+  background-color: rgba(55, 93, 251, 1);
+}
+
+.stat-btn.feature {
+  background-color: rgba(110, 63, 243, 1);
+}
+
+.stat-btn.green {
+  background-color: rgba(45, 159, 117, 1);
+}
+
+.stat-btn.neutral {
+  background-color: rgba(82, 88, 102, 1);
+}
+
+.stat-btn.teal {
+  background-color: rgba(31, 135, 173, 1);
+}
+
+.stat-btn.red {
+  background-color: rgba(223, 28, 65, 1);
+}
+
+.stat-btn.orange {
+  background-color: rgba(241, 123, 44, 1);
+}
+
+/* Container styling for job card */
+.job-card {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* max-width: 500px; */
+}
+
+/* Styling for the logo */
+.job-card-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Content area styling */
+.job-card-content {
+  flex: 1;
+}
+
+/* Title styling */
+.job-card-content h5 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Location, Ref No, Posted By styling */
+.job-location,
+.job-ref,
+.job-poster {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin: 2px 0;
+}
+
+/* Dates styling */
+.job-dates {
+  color: #b3b3b3;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* Horizontal divider styling */
+.job-card-content hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 12px 0;
+}
+
+/* Job metrics section */
+.job-metrics {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #b3b3b3;
+  font-size: 0.85rem;
+}
+
+/* Each metric item */
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-item p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.metric-value {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.metric-value.views {
+  color: #4a90e2;
+}
+
+.metric-value.applicants {
+  color: #9c27b0;
+}
+
+.metric-value.shortlisted {
+  color: #4caf50;
+}
+
+.metric-value.interviewed {
+  color: #ff9800;
+}
+
+.metric-value.rejected {
+  color: #f44336;
+}
+
+/* Three dots icon */
+.three-dots {
+  font-size: 1.5rem;
+  color: #8f9bb3;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+
+.filter-bar {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.date {
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  width: 150px;
+  border: 1px solid white;
+  text-align: center;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+/* Dropdown Styling */
+.filter-bar select {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+  position: relative;
+}
+
+.filter-group {
+  width: 180px !important;
+}
+
+/* Label Styling */
+.filter-bar label {
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: -10px;
+  margin-left: 8px;
+}
+
+.filter-bar input {
+  background-color: #2a2e45;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 7px 10px;
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-md-2 ">
+        <div class="sidebar">
+          <ul>
+            <li><i class="fas fa-th-large"></i> Dashboard</li>
+            <li><i class="fas fa-comments"></i> Interviews</li>
+            <li class="section-title">ORGANIZATIONS</li>
+            <li><i class="fas fa-briefcase"></i> Job Board</li>
+            <li> <i class="fas fa-clipboard-list"></i> Jobs </li>
+            <div class="subMenu">
+              <li><i class="fas fa-plus-square "></i> Create</li>
+              <li><i class="fas fa-list"></i> Listing</li>
+            </div>
+
+            <li class="section-title">SCALING TOOLS MANAGEMENT</li>
+            <li><i class="fas fa-question-circle"></i> Quiz Designer</li>
+            <li><i class="fas fa-video"></i> Interview Designer</li>
+            <li><i class="fas fa-star"></i> Traits</li>
+            <li>
+              <i class="fas fa-layer-group"></i> Categories
+              <ul class=" ">
+
+              </ul>
+            </li>
+            <li class="section-title">USERS MANAGEMENT</li>
+            <li><i class="fas fa-users"></i> Team</li>
+            <li><i class="fas fa-user"></i> Candidates</li>
+            <li><i class="fas fa-video"></i> Videos Resume Hub</li>
+            <li><i class="fas fa-check-circle"></i> Shortlisted Candidates</li>
+            <li class="section-title">OTHERS</li>
+            <li><i class="fas fa-user-cog"></i> Memberships</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="col-md-10">
+        <!-- Header -->
+        <div class="header">
+          <h2>Jobs</h2>
+        </div>
+
+        <!-- Stats Buttons -->
+        <div class="stats">
+          <div class="stat-btn information">Total Jobs: 38</div>
+          <div class="stat-btn feature">Total Views on Jobs: 113</div>
+          <div class="stat-btn green">Active Jobs: 7</div>
+          <div class="stat-btn neutral">Inactive Jobs: 0</div>
+          <div class="stat-btn teal">Filled Jobs: 17</div>
+          <div class="stat-btn red">Expired Jobs: 14</div>
+          <div class="stat-btn orange">Expiring Soon: 0</div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <input type="text" placeholder="Search" class="filter-button" />
+
+          <div class="filter-group">
+            <label for="status">Status</label>
+            <select id="status">
+              <option>All</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="employment-level">Employment Level</label>
+            <select id="employment-level">
+              <option>All</option>
+              <option>Entry</option>
+              <option>Mid</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="employment-level">Employment Level</label>
+            <select id="employment-level">
+              <option>All</option>
+              <option>Entry</option>
+              <option>Mid</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="employment-level">Employment Level</label>
+            <select id="employment-level">
+              <option>All</option>
+              <option>Entry</option>
+              <option>Mid</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="employment-level">Qualifications</label>
+            <select id="employment-level">
+              <option>All</option>
+              <option>Entry</option>
+              <option>Mid</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="employment-level">Posted by</label>
+            <select id="employment-level">
+              <option>All</option>
+              <option>Entry</option>
+              <option>Mid</option>
+              <option>Senior</option>
+            </select>
+          </div>
+          <div class="date">Date Range <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 20 20" fill="none">
+              <path
+                d="M6.66667 5.83333V2.5M13.3333 5.83333V2.5M5.83333 9.16667H14.1667M4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V5.83333C17.5 4.91286 16.7538 4.16667 15.8333 4.16667H4.16667C3.24619 4.16667 2.5 4.91286 2.5 5.83333V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5Z"
+                stroke="#CDD0D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+        </div>
+
+        <!-- Job Listing -->
+        <div class="grid ">
+
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+          <div class="job-card">
+            <img src="./download.png" alt="Company Logo" class="job-card-logo" />
+            <div class="job-card-content">
+              <h5>Finance Controls - LRR Mapping</h5>
+              <p class="job-location">Glasgow, GB</p>
+              <p class="job-ref">Ref No: JR-0000011778</p>
+              <p class="job-poster">Posted by: CIFA Employers</p>
+              <p class="job-dates">Created On: 31 Oct 2024 | Expires: 28 Nov 2024</p>
+              <hr />
+              <div class="job-metrics">
+                <div class="metric-item">
+                  <p>Views</p>
+                  <span class="metric-value views">6</span>
+                </div>
+                <div class="metric-item">
+                  <p>Applicants</p>
+                  <span class="metric-value applicants">3</span>
+                </div>
+                <div class="metric-item">
+                  <p>Shortlisted</p>
+                  <span class="metric-value shortlisted">2</span>
+                </div>
+                <div class="metric-item">
+                  <p>Interviewed</p>
+                  <span class="metric-value interviewed">1</span>
+                </div>
+                <div class="metric-item">
+                  <p>Rejected</p>
+                  <span class="metric-value rejected">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="three-dots">⋮</div>
+          </div>
+
+
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>
