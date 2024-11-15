@@ -82,7 +82,19 @@ body::before {
   color: #8f9bb3;
   text-decoration: none;
 }
-
+.flex{
+  display: flex;
+  align-content: center;
+  justify-content: center; 
+  gap: 20px;
+   
+}
+.flex2{
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+   
+}
 .sidebar a:hover {
   color: #ffffff;
 }
