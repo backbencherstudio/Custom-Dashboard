@@ -8,25 +8,29 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
-
+  
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
+  <div class="">
+    <div class="mainContent">
       <!-- Sidebar -->
-      <aside class="col-md-2 ">
+      <aside class="subFirst">
         <div class="sidebar">
           <ul>
             <li><i class="fas fa-th-large"></i> Dashboard</li>
             <li><i class="fas fa-comments"></i> Interviews</li>
             <li class="section-title">ORGANIZATIONS</li>
             <li><i class="fas fa-briefcase"></i> Job Board</li>
-            <li> <i class="fas fa-clipboard-list"></i> Jobs </li>
-            <div class="subMenu">
-              <li><i class="fas fa-plus-square "></i> Create</li>
-              <li><i class="fas fa-list"></i> Listing</li>
-            </div>
+            <ul>
+              <li id="jobs">
+                <i class="fas fa-clipboard-list"></i> Jobs <i class="fa-solid fa-chevron-down arrow"></i>
+              </li>
+              <div class="subMenu">
+                <li><i class="fas fa-plus-square"></i> Create</li>
+                <li><i class="fas fa-list"></i> Listing</li>
+              </div>
+            </ul>
 
             <li class="section-title">SCALING TOOLS MANAGEMENT</li>
             <li><i class="fas fa-question-circle"></i> Quiz Designer</li>
@@ -51,14 +55,16 @@
       </aside>
 
       <!-- Main Content -->
-      <main class="col-md-10">
+      <main class="subSecond">
         <!-- Header -->
         <div class="header flex2">
+          
           <h2>Jobs</h2>
           <div class="flex">
             <img src="/transparent.png" alt="">
             <p>CIFA</p>
           </div>
+       <i id="toggleBtn"  class="fa fa-bars"></i>
         </div>
 
         <!-- Stats Buttons -->
@@ -139,8 +145,7 @@
         </div>
 
         <!-- Job Listing -->
-        <div class="grid ">
-
+        <div class="job-cards">
           <div class="job-card">
             <img src="./download.png" alt="Company Logo" class="job-card-logo" />
             <div class="job-card-content">
@@ -447,14 +452,12 @@
             </div>
             <div class="three-dots">⋮</div>
           </div>
-
-
-
         </div>
 
       </main>
     </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
