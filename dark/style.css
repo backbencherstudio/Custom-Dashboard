@@ -23,17 +23,17 @@ body {
   margin: 0 auto;
 }
 
-.mainContent {
+.mainContent { 
   display: flex;
-  gap: 30px;
 }
 
 
 /* Sidebar styling */
-.sidebar {
+.x {
   min-height: 100vh;
   background-color: #f1f3ff;
   color: #ffffff;
+  margin-right: 30px;
 }
 
 .logo {
