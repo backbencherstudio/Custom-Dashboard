@@ -15,12 +15,11 @@
 }
 
 body {
-  background: #060715;
-  color: #e0e0e0;
+  background: white;
+  color: #1b1f3b;
   padding: 10px;
   font-family: Arial, sans-serif;
   /* position: relative; */
-  width: fit-content;
   margin: 0 auto;
 }
 
@@ -33,7 +32,7 @@ body {
 /* Sidebar styling */
 .sidebar {
   min-height: 100vh;
-  background-color: #1a1d2e;
+  background-color: #f1f3ff;
   color: #ffffff;
 }
 
@@ -74,13 +73,14 @@ body {
 
 .sidebar .section-title {
   color: #CDD0D5;
-font-family: "Space Grotesk";
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 16px; /* 133.333% */
-letter-spacing: 0.12px;
-text-transform: uppercase;
+  font-family: "Space Grotesk";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
 }
 
 .sidebar a {
@@ -197,19 +197,15 @@ li {
   /* Space between the cards */
   justify-content: end;
   /* Align items to the right side of the screen */
- margin-top: 20px;
+  margin-top: 20px;
 }
 
 .job-card {
   display: flex;
   align-items: flex-start;
-  /* background: rgba(0, 0, 0, 0.6); */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 20px;
-  position: relative; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /* max-width: 500px; */
+  
+  border: 1px solid #E9EAEC; 
+  box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.40);
 }
 
 /* Styling for the logo */
@@ -323,11 +319,11 @@ li {
 
 
 .filter-bar {
-  display: flex;  
-  width: 100%;  
-  align-items: center;  
-  justify-content: space-between;  
-  
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .date {
