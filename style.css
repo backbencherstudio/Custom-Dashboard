@@ -325,6 +325,7 @@ li {
 .filter-bar {
   display: flex;
   width: 100%;
+  gap: 8px;
   align-items: center;
   justify-content: space-between;
 margin-bottom: 20px;
