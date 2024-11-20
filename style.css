@@ -464,9 +464,11 @@ margin-bottom: 20px;
   .sidebar {
     position: fixed;
     overflow: scroll;
-    width: 250px; 
+    width: 250px;
+    height: 100%;
     transform: translateX(-205%);
     transition: transform 0.3s ease-in-out;
+  background: #1b1f3b;
   }
   .stats {
     display: grid;
@@ -525,8 +527,10 @@ margin-bottom: 20px;
   }
 
   .job-metrics {
-    flex-direction: column;
-    gap: 10px;
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: px;
   }
 
   .grid {
