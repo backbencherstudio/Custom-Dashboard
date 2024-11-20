@@ -1,17 +1,20 @@
 @font-face {
   font-family: myFirstFont;
-  src: url('./SpaceGrotesk_Complete/Fonts/WEB/fonts/SpaceGrotesk-Regular.woff2');
+  src: url('/SpaceGrotesk_Complete/Fonts/WEB/fonts/SpaceGrotesk-Regular.woff2');
 }
 
 * {
   font-family: myFirstFont;
-  margin: 0;
+  margin: 0  ;
   padding: 0;
   box-sizing: border-box;
+   
+  
 }
 
 .maxwidth1608px {
   max-width: 1608px;
+  
 }
 
 body {
