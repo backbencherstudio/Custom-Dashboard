@@ -1,6 +1,6 @@
 @font-face {
   font-family: myFirstFont;
-  src: url('./SpaceGrotesk_Complete/Fonts/WEB/fonts/SpaceGrotesk-Regular.woff2');
+  src: url('/SpaceGrotesk_Complete/Fonts/WEB/fonts/SpaceGrotesk-Regular.woff2');
 }
 
 * {
@@ -15,24 +15,30 @@
 }
 
 body {
-  background: white;
-  color: #1b1f3b;
+  background: #060715;
+  color: #e0e0e0;
   padding: 10px;
-  font-family: Arial, sans-serif;
-  /* position: relative; */
+  width: fit-content;
   margin: 0 auto;
 }
 
-.mainContent { 
+.mainContent {
   display: flex;
 }
 
 
 /* Sidebar styling */
-.x {
-  min-height: 100vh;
-  background-color: #f1f3ff;
-  color: #ffffff;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #E9EAEC;
+  background: #FFF;
+  box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.40);
+  backdrop-filter: blur(4.5px);
   margin-right: 30px;
 }
 
@@ -201,19 +207,24 @@ li {
 }
 
 .job-card {
-  display: flex;
-  align-items: flex-start;
-  
-  border: 1px solid #E9EAEC; 
+  border-radius: var(--Container-corner-radius, 10px);
+  border: 1px solid #E9EAEC;
+  background: #FFF;
   box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.40);
+  display: flex;
+  padding: var(--Container-padding-large, 20px) 24px var(--Container-padding-large, 20px) var(--Container-padding-large, 20px);
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
 }
 
 /* Styling for the logo */
 .job-card-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 15px;
+  width: 48px;
+height: 48px;
+flex-shrink: 0;
+border-radius: 48px;
+background: url('/Listing.png') lightgray 50% / cover no-repeat;
 }
 
 /* Content area styling */
@@ -299,15 +310,7 @@ li {
   color: #f44336;
 }
 
-/* Three dots icon */
-.three-dots {
-  font-size: 1.5rem;
-  color: #8f9bb3;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
+
 
 
 .grid {
