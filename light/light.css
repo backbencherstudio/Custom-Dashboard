@@ -104,12 +104,9 @@ body {
 
 .subMenu {
   display: none;
+  /* Initially hidden */
   margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
-
 .subMenu.show {
   display: block;
   /* Show when the class 'show' is added */
