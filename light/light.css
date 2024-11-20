@@ -29,6 +29,7 @@ body {
 
 /* Sidebar styling */
 .sidebar {
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -37,7 +38,7 @@ body {
   border-radius: 8px;
   border: 1px solid #E9EAEC;
   background: #FFF;
-  box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.40);
+  box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.738);
   backdrop-filter: blur(4.5px);
   margin-right: 30px;
 }
@@ -63,8 +64,8 @@ body {
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: #a4a6b3;
-  cursor: pointer;
+  color: #5E6877;
+
 }
 
 .sidebar li i {
@@ -72,13 +73,15 @@ body {
   font-size: 18px;
 }
 
-.sidebar li:hover {
+.sidebar li:not(.section-title):hover {
   background-color: #2a2e43;
   color: #ffffff;
+  cursor: pointer;
 }
 
+
 .sidebar .section-title {
-  color: #CDD0D5;
+  color: #5E6877;
   font-family: "Space Grotesk";
   font-size: 12px;
   font-style: normal;
@@ -90,14 +93,21 @@ body {
 }
 
 .sidebar a {
-  color: #8f9bb3;
+  color: #5E6877;
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
   text-decoration: none;
 }
 
 .subMenu {
   display: none;
-  /* Initially hidden */
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .subMenu.show {
@@ -107,7 +117,6 @@ body {
 
 li {
   list-style: none;
-  cursor: pointer;
 }
 
 .flex {
@@ -164,8 +173,11 @@ li {
   width: 100%;
   gap: 12px;
   margin-bottom: 20px;
+  margin-top: 48px;
 }
-
+.stat-btn{
+  padding: 10px;
+}
 .stat-btn.information {
   background-color: rgba(55, 93, 251, 1);
 }
@@ -199,7 +211,7 @@ li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Default to 3 columns */
-  gap: 16px;
+  gap: 20px;
   /* Space between the cards */
   justify-content: end;
   /* Align items to the right side of the screen */
@@ -212,7 +224,8 @@ li {
   background: #FFF;
   box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.40);
   display: flex;
-  padding: var(--Container-padding-large, 20px) 24px var(--Container-padding-large, 20px) var(--Container-padding-large, 20px);
+
+  padding: 24px;
   align-items: flex-start;
   gap: 12px;
   flex: 1 0 0;
@@ -221,10 +234,10 @@ li {
 /* Styling for the logo */
 .job-card-logo {
   width: 48px;
-height: 48px;
-flex-shrink: 0;
-border-radius: 48px;
-background: url('/Listing.png') lightgray 50% / cover no-repeat;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background: url('/Listing.png') lightgray 50% / cover no-repeat;
 }
 
 /* Content area styling */
@@ -308,11 +321,7 @@ background: url('/Listing.png') lightgray 50% / cover no-repeat;
 
 .metric-value.rejected {
   color: #f44336;
-}
-
-
-
-
+} 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -326,23 +335,10 @@ background: url('/Listing.png') lightgray 50% / cover no-repeat;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-
+margin-bottom: 20px;
 }
 
-.date {
-  background: transparent;
-  cursor: pointer;
-  color: white;
-  width: 150px;
-  border: 1px solid white;
-  text-align: center;
-  padding: 7px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  gap: 20px;
-}
+ 
 
 /* Dropdown Styling */
 .filter-bar select {
@@ -366,12 +362,31 @@ background: url('/Listing.png') lightgray 50% / cover no-repeat;
 } */
 
 /* Label Styling */
+.filterItem {
+  position: relative;
+  display: flex;
+  padding: 10px 10px 10px 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid #E9EAEC;
+  background: #FFF;
+
+  /* regular-shadow/x-small */
+  box-shadow: 0px 1px 2px 0px rgba(228, 229, 231, 0.24);
+}
+
 .filter-bar label {
-  color: #e0e0e0;
-  font-size: 0.8rem;
-  display: block;
-  margin-bottom: -10px;
-  margin-left: 8px;
+  display: flex;
+  padding: 0px 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  left: 11px;
+  top: -8px;
+  background: rgba(255, 255, 255, 1);
 }
 
 .filter-bar input {
@@ -389,23 +404,13 @@ background: url('/Listing.png') lightgray 50% / cover no-repeat;
 
 /* Global styling */
 @media (max-width: 1440px) {
-  .sidebar {
-    position: fixed;
-    overflow: scroll;
-    width: 250px;
-    height: 100%;
-    transform: translateX(-105%);
-    transition: transform 0.3s ease-in-out;
-  }
+
 
   .sidebar.open {
     transform: translateX(0);
   }
 
-  #toggleBtn {
-    display: block;
-    cursor: pointer;
-  }
+  
 
   .subSecond {
     width: 100%;
@@ -448,7 +453,18 @@ background: url('/Listing.png') lightgray 50% / cover no-repeat;
   body {
     padding: 5px;
   }
-
+  #toggleBtn {
+    display: block;
+    cursor: pointer;
+  }
+  .sidebar {
+    position: fixed;
+    overflow: scroll;
+    width: 250px;
+    height: 100%;
+    transform: translateX(-205%);
+    transition: transform 0.3s ease-in-out;
+  }
   .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
