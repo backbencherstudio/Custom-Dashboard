@@ -216,18 +216,16 @@ li {
 }
 
 .job-card {
-  
-  gap: 12px;
-  
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   /* background: rgba(0, 0, 0, 0.6); */
-  border: 1px solid #E9EAEC;
-
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 20px;
   position: relative; 
-  box-shadow: 0px 3px 6px 0px rgba(192, 192, 192, 0.40);   
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* max-width: 500px; */
 }
 
 /* Styling for the logo */
@@ -278,6 +276,8 @@ li {
 /* Job metrics section */
 .job-metrics {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   text-align: center;
   color: #b3b3b3;
