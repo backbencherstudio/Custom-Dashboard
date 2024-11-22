@@ -5,42 +5,44 @@
 
 * {
   font-family: myFirstFont;
-  margin: 0  ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-   
-  
+
+
 }
 
 .maxwidth1608px {
   max-width: 1608px;
-  
+
 }
 
 body {
   background: #060715;
   color: #e0e0e0;
-  padding: 10px; 
+  padding: 10px;
   width: fit-content;
   margin: 0 auto;
-  
+
   -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);background: linear-gradient(45deg, rgba(255, 157, 63, 1), rgba(244, 103, 114, 1), rgba(175, 51, 228, 1), rgba(47, 112, 228, 1));
+  backdrop-filter: blur(3px);
+  background: linear-gradient(45deg, rgba(255, 157, 63, 1), rgba(244, 103, 114, 1), rgba(175, 51, 228, 1), rgba(47, 112, 228, 1));
 
 }
 
-.mainContent { 
+.mainContent {
   display: flex;
 }
 
 
 /* Sidebar styling */
-.sidebar { 
+.sidebar {
+  width: 248px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.10);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4.5px);
-  margin-right: 30px; 
+  margin-right: 30px;
 }
 
 .logo {
@@ -56,28 +58,40 @@ body {
 
 .sidebar ul {
   list-style-type: none;
+  display: flex; 
+  flex-direction: column;
+  gap: 5px;
   padding: 0;
 }
 
 .sidebar li {
   padding: 15px 20px;
+  margin: 5px;
+  height: 35px; 
   display: flex;
   align-items: center;
   font-size: 14px;
   color: #a4a6b3;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .sidebar li i {
   margin-right: 15px;
   font-size: 18px;
 }
-
-.sidebar li:hover {
-  background-color: #2a2e43;
-  color: #ffffff;
+.section-title{
+  cursor: text !important;
+  font-size: 12px;
+  width: 100%;
 }
 
+.sidebar li:not(.section-title):hover {  
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: radial-gradient(82.89% 82.89% at 50% 50%, rgba(39, 120, 155, 0.18) 11%, rgba(77, 172, 212, 0.04) 100%);
+  box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.10) inset, 0px -2px 0px 0px rgba(0, 0, 0, 0.04) inset, 0px 1px 2px 0px rgba(13, 13, 18, 0.06);
+}
 .sidebar .section-title {
   color: #5E6877;
   font-family: "Space Grotesk";
@@ -204,7 +218,7 @@ li {
   /* Space between the cards */
   justify-content: end;
   /* Align items to the right side of the screen */
- margin-top: 20px;
+  margin-top: 20px;
 }
 
 .job-card {
@@ -215,7 +229,7 @@ li {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 20px;
-  position: relative; 
+  position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   /* max-width: 500px; */
 }
@@ -267,7 +281,7 @@ li {
 /* Job metrics section */
 .job-metrics {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
   text-align: center;
@@ -338,10 +352,10 @@ li {
   gap: 8px;
   align-items: center;
   justify-content: space-between;
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
- 
+
 
 /* Dropdown Styling */
 .filter-bar select {
@@ -373,7 +387,7 @@ margin-bottom: 20px;
   align-items: center;
   gap: 8px;
   align-self: stretch;
-  border-radius: 10px; 
+  border-radius: 10px;
 
 
   /* regular-shadow/x-small */
@@ -392,26 +406,28 @@ margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.05);
 
 }
-#status{
+
+#status {
   border: none;
   background: transparent
-
 }
-#status2{
+
+#status2 {
   border: none;
   background: transparent;
 }
+
 #status3 {
   border: none;
   background: transparent;
 }
+
 #status4 {
   border: none;
   background: transparent;
 }
-.filter-bar input {
- 
-}
+
+.filter-bar input {}
 
 .arrow {
   margin-left: 100px;
@@ -426,7 +442,7 @@ margin-bottom: 20px;
     transform: translateX(0);
   }
 
-  
+
 
   .subSecond {
     width: 100%;
@@ -469,10 +485,12 @@ margin-bottom: 20px;
   body {
     padding: 5px;
   }
+
   #toggleBtn {
     display: block;
     cursor: pointer;
   }
+
   .sidebar {
     position: fixed;
     overflow: scroll;
@@ -480,8 +498,9 @@ margin-bottom: 20px;
     height: 100%;
     transform: translateX(-205%);
     transition: transform 0.3s ease-in-out;
-  background: #1b1f3b;
+    background: #1b1f3b;
   }
+
   .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
