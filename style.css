@@ -410,6 +410,45 @@ li {
   /* backdrop-filter: blur(15px);  */
   border: none;
 }
+ 
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(226, 228, 233, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 1px 2px rgba(228, 229, 231, 0.24);
+  flex: 1;
+  align-self: stretch;
+}
+
+
+.filterItem input {
+  flex: 1;
+  border: none; /* Remove default border */
+  background: transparent; /* Make background transparent */
+  color: #CDD0D5; /* Light grey color for text */
+  font-size: 14px;
+  outline: none; /* Remove outline on focus */
+  padding: 8px 12px; /* Add padding for input field */
+}
+
+.filterItem input::-webkit-calendar-picker-indicator {
+  background: transparent; /* Ensure calendar button is visible */
+  border: none; /* Remove default border around the calendar picker */
+}
+
+.filterItem input::placeholder {
+  color: #CDD0D5; /* Light placeholder color */
+}
+
+.filterItem svg {
+  flex-shrink: 0; /* Prevent the SVG from shrinking */
+  width: 20px;
+  height: 20px;
+}
 
 #status {
   border: none;
