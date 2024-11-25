@@ -56,6 +56,9 @@ body {
 
 .sidebar ul {
   list-style-type: none;
+  display: flex; 
+  flex-direction: column;
+  gap: 5px;
   padding: 0;
 }
 
@@ -226,6 +229,7 @@ li {
 
 .job-card {
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: flex-start;
   /* background: rgba(0, 0, 0, 0.6); */
