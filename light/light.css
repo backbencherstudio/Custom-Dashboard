@@ -229,7 +229,7 @@ li {
 
 .job-card {
   display: flex;
-  gap: 10px;
+  
   flex-wrap: wrap;
   align-items: flex-start;
   /* background: rgba(0, 0, 0, 0.6); */
@@ -243,10 +243,10 @@ li {
 
 /* Styling for the logo */
 .job-card-logo {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 48px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
   background: url('/Listing.png') lightgray 50% / cover no-repeat;
 }
 
