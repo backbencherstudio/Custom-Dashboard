@@ -427,7 +427,7 @@ margin-bottom: 20px;
 
   .filter-bar {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin-bottom: 20px;
     align-items: center;
@@ -456,7 +456,27 @@ margin-bottom: 20px;
   }
 
 }
+@media (max-width: 1100px) {
+  .filter-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    scroll-behavior: auto;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
 
+
+}
 @media (max-width: 768px) {
   body {
     padding: 5px;
@@ -475,7 +495,7 @@ margin-bottom: 20px;
   }
   .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     scroll-behavior: auto;
     width: 100%;
     gap: 12px;
