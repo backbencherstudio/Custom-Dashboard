@@ -538,8 +538,8 @@ li {
   .sidebar {
     position: fixed;
     overflow: scroll;
-    width: 250px;
-    height: 100%;
+    width: 250px; 
+    height: 100vh;
     transform: translateX(-205%);
     transition: transform 0.3s ease-in-out;
     background: #1b1f3b;
