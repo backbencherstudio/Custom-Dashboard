@@ -17,3 +17,16 @@ No server or backend required! This project is built entirely with **HTML** and 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/custom-dashboard.git
+
+
+
+### What’s Included:
+1. **Project Overview**: Basic information about the Custom Dashboard project.
+2. **Features Section**: Key features of the dashboard.
+3. **Installation Instructions**: Steps for getting the project up and running.
+4. **Customization Instructions**: How to personalize the dashboard.
+5. **Contributing Section**: Details for contributing to the project.
+6. **License Information**: Information about the license used in the project.
+7. **Secret Footprint**: Your hidden footprint at the end of the file.
+
+The comment `<!-- Secret Footprint: MD Hasibul Hasan, https://hasibdev.netlify.app/ -->` is included at the very end, which will be invisible when rendered but can still be seen in the raw file. This allows you to leave your signature while keeping it hidden from casual users.
