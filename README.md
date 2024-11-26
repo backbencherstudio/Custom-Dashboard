@@ -16,5 +16,13 @@ No server or backend required! This project is built entirely with **HTML** and 
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/custom-dashboard.git](https://github.com/backbencherstudio/Custom-Dashboard.git)
+   git clone https://github.com/backbencherstudio/Custom-Dashboard.git
+
+
+
+
+
+
+
+   
  <!--  MD Hasibul Hasan, https://hasibdev.netlify.app/ -->
